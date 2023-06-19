@@ -1,0 +1,26 @@
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+  
+.hole {
+    width: 100px;
+    height: 100px;
+    background-color: #F2F2F2;
+    border-radius: 50%;
+    cursor: pointer;
+}
+  
+#score,
+#timer {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+}
+  
+#score-value,
+#timer-value {
+    font-weight: bold;
+}
