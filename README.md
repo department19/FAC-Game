@@ -1,5 +1,5 @@
 # Whack a Bug!
----
+
 Whack a Bug game is a simple game where the end user will "squash the bugs" through mouse input, point and click!
 
 *insert image here*
