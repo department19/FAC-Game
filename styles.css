@@ -27,8 +27,6 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 1rem;
-    /* grid-template-columns: repeat(3, 1fr); */
-    /* background-color: var(--bg2); */
     gap: 1rem;
 }
   
