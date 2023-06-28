@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const holes = document.querySelectorAll(".hole");
   const scoreDisplay = document.getElementById("score-value");
   const timerDisplay = document.getElementById("timer-value");
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
     resetGame();
     isGameRunning = true;
     randomMole();
-    setTimeout(stopGame, 30100); // 30 seconds, edit 10 secs now
+    setTimeout(stopGame, 30100); // 30 seconds, edit 10 secs now, the extra 100 needed to make it hit 0
     startTimer();
   }
 
@@ -20,21 +20,23 @@ document.addEventListener("DOMContentLoaded", function() {
     scoreDisplay.textContent = score;
     timerDisplay.textContent = time;
   }
-  
+
   // this make moles appear
   function randomMole() {
     const randomHole = holes[Math.floor(Math.random() * holes.length)];
-    randomHole.classList.add("mole");  
-    setTimeout(() => {
-      randomHole.classList.remove("mole");
-      if (isGameRunning) {
+    randomHole.classList.add("mole");
+    setTimeout(
+      () => {
+        randomHole.classList.remove("mole");
+        if (isGameRunning) {
           randomMole();
-      }
-    },
-    // below 
-    Math.random() * 2000 + 500); // Moles appear randomly between 0.5 to 2.5 seconds
+        }
+      },
+      // below defines the speed of moles appearing
+      Math.random() * 2000 + 500
+    ); // Moles appear randomly between 0.5 to 2.5 seconds
   }
-  
+
   function startTimer() {
     const timer = setInterval(() => {
       time--;
@@ -44,15 +46,15 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     }, 1000);
   }
-  
+
   function stopGame() {
     isGameRunning = false;
     alert("Game Over! Your score: " + score);
   }
-  
+
   // removal of mole
-  holes.forEach(function(hole) {
-    hole.addEventListener("click", function() {
+  holes.forEach(function (hole) {
+    hole.addEventListener("click", function () {
       if (isGameRunning && hole.classList.contains("mole")) {
         hole.classList.remove("mole");
         score++;
@@ -60,6 +62,6 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   });
-  
+
   startGame();
-  });
+});
