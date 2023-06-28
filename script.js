@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
     resetGame();
     isGameRunning = true;
     randomMole();
-    setTimeout(stopGame, 30000); // 30 seconds
+    setTimeout(stopGame, 30100); // 30 seconds, edit 10 secs now
     startTimer();
   }
 
@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
     timerDisplay.textContent = time;
   }
   
+  // this make moles appear
   function randomMole() {
     const randomHole = holes[Math.floor(Math.random() * holes.length)];
     randomHole.classList.add("mole");  
@@ -29,7 +30,9 @@ document.addEventListener("DOMContentLoaded", function() {
       if (isGameRunning) {
           randomMole();
       }
-    }, Math.random() * 2000 + 500); // Moles appear randomly between 0.5 to 2.5 seconds
+    },
+    // below 
+    Math.random() * 2000 + 500); // Moles appear randomly between 0.5 to 2.5 seconds
   }
   
   function startTimer() {
@@ -47,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
     alert("Game Over! Your score: " + score);
   }
   
+  // removal of mole
   holes.forEach(function(hole) {
     hole.addEventListener("click", function() {
       if (isGameRunning && hole.classList.contains("mole")) {
