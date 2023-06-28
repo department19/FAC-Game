@@ -8,6 +8,7 @@
     --bg4: #3b3b4f;
     --text1: #ffffff;
     --text2: #f5f6f7;
+    --bug: #dbb8ff;
 }
 
 html {
@@ -38,6 +39,10 @@ body {
     border: 1px solid #f1be32;
     border-radius: 25%;
     cursor: pointer;
+}
+
+.mole {
+    background-color: var(--bug);
 }
   
 #score,
