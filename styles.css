@@ -21,17 +21,19 @@ body {
 }
 
 #game-board {
-    display: grid;
+    margin: auto 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     padding: 1rem;
-    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: repeat(3, 1fr); */
     /* background-color: var(--bg2); */
     gap: 1rem;
-    margin-top: 2rem;
 }
   
 .hole {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     background-color: var(--bg4);
     border: 1px solid #f1be32;
     border-radius: 25%;
