@@ -1,15 +1,40 @@
+* {
+    outline: 1px red dashed;
+}
+
+:root {
+    --bg1: #0a0a23;
+    --bg2: #1b1b32;
+    --bg4: #3b3b4f;
+    --text1: #ffffff;
+    --text2: #f5f6f7;
+}
+
+html {
+    font-size: 10px;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+}
+
+body {
+    background-color: var(--bg1);
+    color: var(--text1);
+}
+
 #game-board {
     display: grid;
+    padding: 1rem;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-top: 20px;
+    /* background-color: var(--bg2); */
+    gap: 1rem;
+    margin-top: 2rem;
 }
   
 .hole {
     width: 100px;
     height: 100px;
-    background-color: #F2F2F2;
-    border-radius: 50%;
+    background-color: var(--bg4);
+    border: 1px solid #f1be32;
+    border-radius: 25%;
     cursor: pointer;
 }
   
