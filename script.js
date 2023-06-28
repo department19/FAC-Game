@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     resetGame();
     isGameRunning = true;
     randomMole();
-    setTimeout(stopGame, 30100); // 30 seconds, edit 10 secs now, the extra 100 needed to make it hit 0
+    setTimeout(stopGame, 30100); // 30 seconds, the extra 100 needed to make it hit 0
     startTimer();
   }
 
@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function randomMole() {
     const randomHole = holes[Math.floor(Math.random() * holes.length)];
     randomHole.classList.add("mole");
+    //this set timeout makes it so the mole appears for a set period?
     setTimeout(
       () => {
         randomHole.classList.remove("mole");
