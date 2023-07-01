@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const holes = document.querySelectorAll(".hole");
+  const holes = document.querySelectorAll(".hole"); //this make an array of the holes
   const scoreDisplay = document.getElementById("score-value");
   const timerDisplay = document.getElementById("timer-value");
   let score = 0;
@@ -31,13 +31,17 @@ document.addEventListener("DOMContentLoaded", function () {
         randomHole.classList.remove("mole");
         if (isGameRunning) {
           randomMole();
+          // this recursive, is check to see if the game is still running and trigger
+          // the mole spawn again
         }
       },
-      // below defines the speed of moles appearing
+      // below defines the speed of the moles to disappear
       Math.random() * 2000 + 500
-    ); // Moles appear randomly between 0.5 to 2.5 seconds
+    ); // Moles appear randomly between 0.5 to 2.5 second
+        
   }
 
+  // make the timer go down, then stops it at 0?
   function startTimer() {
     const timer = setInterval(() => {
       time--;
