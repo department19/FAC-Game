@@ -1,12 +1,20 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
   const holes = document.querySelectorAll(".hole");
   // this make an array of the holes
   const scoreDisplay = document.getElementById("score-value");
   const timerDisplay = document.getElementById("timer-value");
-  let score = 0;
-  let time = 30;
-  let isGameRunning = false;
-});
+  const gameStartButton = document.getElementById("startGame");
+  const score = 0;
+  const time = 30;
+  const isGameRunning = false;
+
+
+  function resetGame() {
+    score = 0;
+    time = 30;
+    scoreDisplay.textContent = score;
+    timerDisplay.textContent = time;
+  }
 
   function startGame() {
     resetGame();
@@ -16,31 +24,23 @@ document.addEventListener("DOMContentLoaded", function () {
     startTimer();
   }
 
-  function resetGame() {
-    score = 0;
-    time = 30;
-    scoreDisplay.textContent = score;
-    timerDisplay.textContent = time;
-  }
-
   // this make moles appear
   function randomMole() {
     const randomHole = holes[Math.floor(Math.random() * holes.length)];
     randomHole.classList.add("mole");
-    //this set timeout makes it so the mole appears for a set period?
+    // this set timeout makes it so the mole appears for a set period?
     setTimeout(
-      () => {
-        randomHole.classList.remove("mole");
-        if (isGameRunning) {
-          randomMole();
+        () => {
+          randomHole.classList.remove("mole");
+          if (isGameRunning) {
+            randomMole();
           // this recursive, is check to see if the game is still running and trigger
           // the mole spawn again
-        }
-      },
-      // below defines the speed of the moles to disappear
-      Math.random() * 2000 + 500
+          }
+        },
+        // below defines the speed of the moles to disappear
+        Math.random() * 2000 + 500,
     ); // Moles appear randomly between 0.5 to 2.5 second
-        
   }
 
   // make the timer go down, then stops it at 0?
@@ -60,8 +60,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // removal of mole
-  holes.forEach(function (hole) {
-    hole.addEventListener("click", function () {
+  holes.forEach(function(hole) {
+    hole.addEventListener("click", function() {
       if (isGameRunning && hole.classList.contains("mole")) {
         hole.classList.remove("mole");
         score++;
@@ -69,6 +69,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-
-  startGame();
-  
+  gameStartButton.addEventListener("click", startGame);
+  // startGame();
+});

@@ -23,9 +23,10 @@ module.exports = {
   },
   'rules': {
     'quotes': [
-      "double",
       "off",
     ],
     "max-len": "off",
+    "linebreak-style": "off",
+    "require-jsdoc": "off",
   },
 };

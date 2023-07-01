@@ -2,6 +2,10 @@
     outline: 1px red dashed;
 } */
 
+div {
+    outline: 1px red dashed;    
+}
+
 :root {
     --bg1: #0a0a23;
     --bg2: #1b1b32;
@@ -53,4 +57,14 @@ body {
 #score-value,
 #timer-value {
     font-weight: bold;
+}
+
+#startGame {
+    margin:20px auto;
+    padding: 10px 20px;
+    border-radius: 10%;
+    background-color: #00471b;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
 }
