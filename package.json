@@ -1,0 +1,19 @@
+{
+  "name": "fac-game",
+  "version": "1.0.0",
+  "description": "Whack a Bug game is a simple game where the end user will \"squash the bugs\" through mouse input, point and click!",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/department19/FAC-Game.git"
+  },
+  "author": "Jack L",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/department19/FAC-Game/issues"
+  },
+  "homepage": "https://github.com/department19/FAC-Game#readme"
+}
