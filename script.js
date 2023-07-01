@@ -1,10 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const holes = document.querySelectorAll(".hole"); //this make an array of the holes
+  const holes = document.querySelectorAll(".hole");
+  // this make an array of the holes
   const scoreDisplay = document.getElementById("score-value");
   const timerDisplay = document.getElementById("timer-value");
   let score = 0;
   let time = 30;
   let isGameRunning = false;
+});
 
   function startGame() {
     resetGame();
@@ -69,4 +71,4 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   startGame();
-});
+  
