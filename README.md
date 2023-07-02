@@ -45,4 +45,5 @@ In response to this I learned that there is a `mousedown` type available to the 
 ## random mole timeout 
 - the system to timeout the "bugs" are inconsistent and I cannot figure out why.
 - are the "bugs" spawning on the same tile?
-- when using the stop game button, the length of time remaining in the next game started is incorrect
+- ~~when using the stop game button, the length of time remaining in the next game started is incorrect~~
+- 

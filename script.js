@@ -59,12 +59,13 @@ document.addEventListener("DOMContentLoaded", function() {
       timerDisplay.textContent = time;
       if (time <= 0 || isGameRunning == false) {
         clearInterval(timer); // this is moved here to fix timer bug not resetting to 30
-        resetGame();
+        // resetGame();
       }
     }, 1000);
   }
 
   function startGame() {
+    resetGame();
     if (isGameRunning == false) {
       isGameRunning = true;
       randomMole();
