@@ -2,10 +2,6 @@
     outline: 1px red dashed;
 } */
 
-div {
-    outline: 1px red dashed;    
-}
-
 :root {
     --bg1: #0a0a23;
     --bg2: #1b1b32;
@@ -35,8 +31,8 @@ body {
 }
   
 .hole {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     background-color: var(--bg4);
     border: 1px solid #f1be32;
     border-radius: 25%;
@@ -59,12 +55,23 @@ body {
     font-weight: bold;
 }
 
-#startGame {
-    margin:20px auto;
+#buttonbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.gamebutton {
+    /* margin: auto; */
     padding: 10px 20px;
     border-radius: 10%;
     background-color: #00471b;
     text-align: center;
     color: #ffffff;
     cursor: pointer;
+}
+
+.hidden {
+    display: none;
 }

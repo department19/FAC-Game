@@ -4,10 +4,10 @@ document.addEventListener("DOMContentLoaded", function() {
   const scoreDisplay = document.getElementById("score-value");
   const timerDisplay = document.getElementById("timer-value");
   const gameStartButton = document.getElementById("startGame");
-  const score = 0;
-  const time = 30;
-  const isGameRunning = false;
-
+  const gameStopButton = document.getElementById("stopGame");
+  let score = 0;
+  let time = 30;
+  let isGameRunning = false;
 
   function resetGame() {
     score = 0;
@@ -16,17 +16,16 @@ document.addEventListener("DOMContentLoaded", function() {
     timerDisplay.textContent = time;
   }
 
-  function startGame() {
-    resetGame();
-    isGameRunning = true;
-    randomMole();
-    setTimeout(stopGame, 30100); // 30 seconds, the extra 100 needed to make it hit 0
-    startTimer();
+  function stopGame() {
+    // resetGame();
+    isGameRunning = false;
+    alert("Game Over! Your score: " + score);
   }
 
   // this make moles appear
   function randomMole() {
     const randomHole = holes[Math.floor(Math.random() * holes.length)];
+    // selecting the holes from an array, this method is scaleable
     randomHole.classList.add("mole");
     // this set timeout makes it so the mole appears for a set period?
     setTimeout(
@@ -34,34 +33,41 @@ document.addEventListener("DOMContentLoaded", function() {
           randomHole.classList.remove("mole");
           if (isGameRunning) {
             randomMole();
-          // this recursive, is check to see if the game is still running and trigger
-          // the mole spawn again
+          // this recursive, triggers the mole to spawn again.
           }
         },
         // below defines the speed of the moles to disappear
-        Math.random() * 2000 + 500,
+        (Math.random() * 2000) + 500,
     ); // Moles appear randomly between 0.5 to 2.5 second
   }
 
-  // make the timer go down, then stops it at 0?
+  // make the timer go down, then stops it at 0
   function startTimer() {
     const timer = setInterval(() => {
       time--;
       timerDisplay.textContent = time;
-      if (time <= 0) {
-        clearInterval(timer);
+      if (time <= 0 || isGameRunning == false) {
+        clearInterval(timer); // this is moved here to fix timer bug not resetting to 30
+        resetGame();
       }
     }, 1000);
   }
 
-  function stopGame() {
-    isGameRunning = false;
-    alert("Game Over! Your score: " + score);
+  function startGame() {
+    if (isGameRunning == false) {
+      isGameRunning = true;
+      randomMole();
+      setTimeout(stopGame, 30100);
+      // 30 seconds, the extra 100 value needed to make it hit 0
+      startTimer();
+    } else {
+      alert("game is already running");
+    }
   }
 
-  // removal of mole
+  // this function tracks mouse input to "whack" the "bug"
   holes.forEach(function(hole) {
-    hole.addEventListener("click", function() {
+    hole.addEventListener("mousedown", function() {
       if (isGameRunning && hole.classList.contains("mole")) {
         hole.classList.remove("mole");
         score++;
@@ -69,6 +75,18 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   });
-  gameStartButton.addEventListener("click", startGame);
-  // startGame();
+
+  // a button to start the game
+  gameStartButton.addEventListener("click", function() {
+    startGame();
+    gameStartButton.classList.add("hidden");
+    gameStopButton.classList.remove("hidden");
+  });
+
+  // the button to force stop the game
+  gameStopButton.addEventListener("click", function() {
+    stopGame();
+    gameStartButton.classList.remove("hidden");
+    gameStopButton.classList.add("hidden");
+  });
 });
