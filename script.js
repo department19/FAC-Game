@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const gameStartButton = document.getElementById("startGame");
   const gameStopButton = document.getElementById("stopGame");
   const mole = document.createElement("img");
+  let gametimeout = 0;
   mole.setAttribute("src", "assets/green_bug.png");
   mole.id = "mole";
 
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function stopGame() {
     // resetGame();
+    clearTimeout(gametimeout);
     isGameRunning = false;
     alert("Game Over! Your score: " + score);
   }
@@ -66,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (isGameRunning == false) {
       isGameRunning = true;
       randomMole();
-      setTimeout(stopGame, 30100);
+      gametimeout = setTimeout(stopGame, 30100);
       // 30 seconds, the extra 100 value needed to make it hit 0
       startTimer();
     } else {
