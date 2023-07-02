@@ -21,7 +21,7 @@ body {
     color: var(--text1);
 }
 
-#game-board {
+#game-area {
     margin: auto 2rem;
     display: flex;
     flex-wrap: wrap;
@@ -31,12 +31,19 @@ body {
 }
   
 .hole {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100px;
     height: 100px;
     background-color: var(--bg4);
     border: 1px solid #f1be32;
     border-radius: 25%;
     cursor: pointer;
+}
+
+.hole > img {
+    color: #acd157;
 }
 
 .mole {
