@@ -27,6 +27,8 @@ document.addEventListener("DOMContentLoaded", function() {
     clearTimeout(gametimeout);
     isGameRunning = false;
     alert("Game Over! Your score: " + score);
+    gameStartButton.classList.remove("hidden");
+    gameStopButton.classList.add("hidden");
   }
 
   // this make moles appear
@@ -111,7 +113,5 @@ document.addEventListener("DOMContentLoaded", function() {
   // the button to force stop the game
   gameStopButton.addEventListener("click", function() {
     stopGame();
-    gameStartButton.classList.remove("hidden");
-    gameStopButton.classList.add("hidden");
   });
 });
