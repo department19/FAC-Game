@@ -7,8 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
-  <h1>Squash-a-bug!</h1>
-  <div><p>A simple game you click the bugs!</p></div>
+  <div id="headerbox">
+    <h1 id="header">Squash-a-bug!</h1>
+  </div>
+  <div><p id="description">A simple game you click the bugs!</p></div>
+  <div id="level" class="ui">Level <span id="level-value">1</span></div>
   <div id="game-area">
     <!-- Grid of holes -->
     <div class="hole"></div>
@@ -16,8 +19,8 @@
     <div class="hole"></div>
     <!-- Add more holes here -->
   </div>
-  <div id="score">Score: <span id="score-value">0</span></div>
-  <div id="timer">Time remaining: <span id="timer-value">30</span></div>
+  <div id="score" class="ui">Score: <span id="score-value">0</span></div>
+  <div id="timer" class="ui">Time remaining: <span id="timer-value">30</span></div>
   <div id="buttonbox">
     <button id="startGame" class="gamebutton">Start Game</button>
     <button id="stopGame" class="gamebutton hidden">Stop Game</button>

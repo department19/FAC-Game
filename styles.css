@@ -12,6 +12,7 @@
 }
 
 html {
+    padding: 0;
     font-size: 10px;
     /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
 }
@@ -19,6 +20,36 @@ html {
 body {
     background-color: var(--bg1);
     color: var(--text1);
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+#headerbox {
+    margin: 0;
+    padding: 0.5rem;
+    background-color: var(--bg4);
+}
+
+#header {
+    margin: 1rem 1rem;
+    font-size: 3rem;
+}
+
+#description {
+    font-size: 1.5rem;
+}
+
+.ui {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+#level {
+    border-bottom: 1px solid var(--text1);
+    padding-bottom: 0.5rem;
+    font-size: 3rem;
 }
 
 #game-area {
@@ -42,21 +73,10 @@ body {
     cursor: pointer;
 }
 
-.hole > img {
-    color: #acd157;
-}
-
 /* .mole {
     background-color: var(--bug);
 } */
-  
-#score,
-#timer {
-    text-align: center;
-    font-size: 18px;
-    margin-top: 20px;
-}
-  
+
 #score-value,
 #timer-value {
     font-weight: bold;
