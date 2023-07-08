@@ -4,7 +4,7 @@
 
 Squash-a-Bug is a simple game where the end user will "squash the bugs" through mouse input, point and click!
 
-[[green_bug.png]]
+<img src="assets/green_bug.png">
 
 Link to the game: https://department19.github.io/FAC-Game/
 
