@@ -1,10 +1,14 @@
 # Squash-a-Bug!
 
-*This webgame is made as part of my portfolio to apply to FAC using only HTML, CSS and raw JS*
+*This web game is made as part of my portfolio to apply to FAC using only HTML, CSS and raw JS*
 
 Squash-a-Bug is a simple game where the end user will "squash the bugs" through mouse input, point and click!
 
-*insert image here*
+[[green_bug.png]]
+
+Link to the game: https://department19.github.io/FAC-Game/
+
+==it should be noted that the "bugs" are referred as "moles" in the code for clarity==
 
 ## Planned Core Implementations
 - A simple working point and click system to remove a "bug" when clicked on by the end user
@@ -14,14 +18,21 @@ Squash-a-Bug is a simple game where the end user will "squash the bugs" through 
 
 ## Planned Advanced Implementations
 - Level system
-- Increasing of difficulty; additional holes, faster "bugs"
+- Increasing of difficulty; additional holes or/and faster "bugs"
 
 ## Basic structure
 
+The game is able to function on 2 general html elements;
+- An area for the "bug" to appear in
+- The visible "bug" to click on
 
-### styling the grid
+### The game area
 
-I originally started to use `display: grid` to form the area for the holes since it seemed the most intuitive, but switched to flexbox since my understanding of grid mechanics was was lacking.
+I originally started to use `display: grid` to form the area for the holes since it seemed the most intuitive, but switched to flexbox since my understanding of grid mechanics was was lacking. Going forward I may switch back to grid to get the holes to line up correctly, though flexbox may work in favour of the addition of more holes with an increase of difficulty. The web game currently doesn't have full responsiveness to different screen sizes and device widths.
+
+### The "bug" element
+
+
 
 ---
 
