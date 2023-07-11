@@ -8,7 +8,7 @@ Squash-a-Bug is a simple game where the end user will "squash the bugs" through 
 
 Link to the game: https://department19.github.io/FAC-Game/
 
-==it should be noted that the "bugs" are referred as "moles" in the code for clarity==
+**it should be noted that the "bugs" are referred as "moles" in the code for clarity**
 
 ## Planned Core Implementations
 - A simple working point and click system to remove a "bug" when clicked on by the end user
@@ -20,11 +20,13 @@ Link to the game: https://department19.github.io/FAC-Game/
 - Level system
 - Increasing of difficulty; additional holes or/and faster "bugs"
 
+---
+
 ## Basic structure
 
 The game is able to function on 2 general html elements;
 - An area for the "bug" to appear in
-- The visible "bug" to click on
+- The visible "bug" to click on and the functional elements
 
 ### The game area
 
@@ -32,14 +34,15 @@ I originally started to use `display: grid` to form the area for the holes since
 
 ### The "bug" element
 
-
+The visible part of the bug for the end client is a simple .png generated using an AI art generator. 
 
 ---
 
 # Development Log
 
 ## addition of a button
-Originally the web game immediately ran after the DOM had loaded, which meant that the player had to be immediately be ready to play or otherwise would lose out on time. Which from an accessibility stand point, is not great.
+Originally the call function of starting the game was placed at the bottom of the JS "script.js" file, this meant the web game immediately ran after the DOM had loaded.
+This was useful while developing, since just refreshing constantly I could check for problems across multiple elements. But it also meant for an actual player, you would have to be immediately be ready to play or otherwise would lose out on time. Which from an accessibility stand point, is not great.
 Hence the addition of a button to trigger the start of the game instead was a natural progression.
 ### button continued
 Following the addition of the button, I decided add a stop button, capable of force stopping the game, that would replace the start one when the game is running and revert back to the start button when the game is stopped.
