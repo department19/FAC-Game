@@ -14,6 +14,8 @@ Link to the game: https://department19.github.io/FAC-Game/
 
 I picked this whack-a-mole format for my game since I generally enjoy playing first person shooter games, and as such developing a game that involved using the mouse as the main interactive element for the game seemed the most intuitive.
 
+I decided to rebrand the game to "Squash-a-bug " part way through and making the game, hence the code is stuck with "mole" in it
+
 ## Planned Core Implementations
 - A simple working point and click system to remove a "bug" when clicked on by the end user
 - JS system of generating "bugs" in random spot on a set grid
