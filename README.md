@@ -10,6 +10,10 @@ Link to the game: https://department19.github.io/FAC-Game/
 
 **it should be noted that the "bugs" are referred as "moles" in the code for clarity**
 
+---
+
+I picked this whack-a-mole format for my game since I generally enjoy playing first person shooter games, and as such developing a game that involved using the mouse as the main interactive element for the game seemed the most intuitive.
+
 ## Planned Core Implementations
 - A simple working point and click system to remove a "bug" when clicked on by the end user
 - JS system of generating "bugs" in random spot on a set grid
@@ -32,9 +36,12 @@ The game is able to function on 2 general html elements;
 
 I originally started to use `display: grid` to form the area for the holes since it seemed the most intuitive, but switched to flexbox since my understanding of grid mechanics was was lacking. Going forward I may switch back to grid to get the holes to line up correctly, though flexbox may work in favour of the addition of more holes with an increase of difficulty. The web game currently doesn't have full responsiveness to different screen sizes and device widths.
 
+Currently the code will account for additional holes to be added and still function
+
 ### The "bug" element
 
-The visible part of the bug for the end client is a simple .png generated using an AI art generator. 
+The visible part of the bug for the end client is a simple .png generated using an AI art generator.
+I use JS to to create an `img` element when the DOM is loaded, then when the game is running, the `randomMole` function is called and appends the 
 
 ---
 

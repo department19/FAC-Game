@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // selecting the holes from an array, this method is scaleable
     randomHole.classList.add("mole");
     randomHole.appendChild(mole);
-    // this set timeout makes it so the mole appears for a set period?
+    // this set timeout makes it so the mole appears for a set period
     setTimeout(
         () => {
           randomHole.classList.remove("mole");
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
       time--;
       timerDisplay.textContent = time;
       if (time <= 0 || isGameRunning == false) {
-        clearInterval(timer); // this is moved here to fix timer bug not resetting to 30
+        clearInterval(timer); // this is here to fix timer bug not resetting to 30
         // resetGame();
       }
     }, 1000);
