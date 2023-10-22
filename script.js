@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // resetGame();
     clearTimeout(gametimeout);
     isGameRunning = false;
-    alert("Game Over! Your score: " + score);
+    alert("Game Over! Your score: " + score + " | There is no level 2 yet!");
     gameStartButton.classList.remove("hidden");
     gameStopButton.classList.add("hidden");
   }
